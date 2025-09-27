@@ -4,244 +4,341 @@ import { useState } from 'react'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
-import { CheckCircle, Star, Users, Trophy, Target, Zap, ArrowRight, Play, Clock, TrendingUp } from 'lucide-react'
+import { CheckCircle, Star, Users, Trophy, Target, Zap, ArrowRight, Play, Clock, TrendingUp, Activity, Brain, Flame, Shield, Timer } from 'lucide-react'
 
-export default function FitnessAppLanding() {
+export default function ProtocoloRecomposicaoAlfa() {
   const [isVideoPlaying, setIsVideoPlaying] = useState(false)
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      {/* Hero Section */}
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-gray-900 to-black">
+      {/* 1. HEADLINE PODEROSA E DIRETA */}
       <section className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-pink-600/20"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-orange-600/20 to-red-600/20"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-16">
           <div className="text-center">
-            <Badge className="mb-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white border-0 px-4 py-2 text-sm font-semibold">
-              🔥 MAIS DE 50.000 PESSOAS JÁ TRANSFORMARAM SEUS CORPOS
+            <Badge className="mb-6 bg-gradient-to-r from-orange-500 to-red-500 text-white border-0 px-6 py-3 text-sm font-bold">
+              🔬 MÉTODO CIENTIFICAMENTE VALIDADO
             </Badge>
             
-            <h1 className="text-4xl sm:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
-              Transforme Seu Corpo em
-              <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent block">
-                90 Dias ou Menos
+            <h1 className="text-4xl sm:text-6xl lg:text-7xl font-bold text-white mb-8 leading-tight">
+              Descubra Seu Tipo Metabólico em
+              <span className="bg-gradient-to-r from-orange-400 to-red-400 bg-clip-text text-transparent block">
+                3 Minutos e Transforme
               </span>
+              <span className="text-white block">Seu Corpo Para Sempre</span>
             </h1>
             
-            <p className="text-xl sm:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-              O único aplicativo que você precisa para <strong className="text-white">perder peso</strong> e 
-              <strong className="text-white"> ganhar massa muscular</strong> ao mesmo tempo, 
-              com planos personalizados por IA
+            {/* 2. SUBHEADLINE */}
+            <p className="text-xl sm:text-2xl text-gray-300 mb-12 max-w-4xl mx-auto leading-relaxed">
+              O <strong className="text-orange-400">Protocolo Recomposição Alfa</strong> revela se seu metabolismo é 
+              <strong className="text-white"> Acelerado, Equilibrado ou Lento</strong> e como usar essa informação para 
+              <strong className="text-red-400"> acelerar o ganho de massa magra</strong> e 
+              <strong className="text-orange-400"> eliminar gordura abdominal</strong> de forma definitiva
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
+            <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-16">
               <Button 
                 size="lg" 
-                className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white px-8 py-4 text-lg font-semibold rounded-full shadow-2xl hover:shadow-purple-500/25 transition-all duration-300 hover:scale-105"
+                className="bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white px-12 py-6 text-xl font-bold rounded-full shadow-2xl hover:shadow-orange-500/25 transition-all duration-300 hover:scale-105"
               >
-                COMEÇAR TRANSFORMAÇÃO AGORA
-                <ArrowRight className="ml-2 w-5 h-5" />
+                DESCOBRIR MEU TIPO METABÓLICO AGORA
+                <ArrowRight className="ml-3 w-6 h-6" />
               </Button>
-              
-              <Button 
-                variant="outline" 
-                size="lg"
-                className="border-2 border-white/20 text-white hover:bg-white/10 px-8 py-4 text-lg rounded-full backdrop-blur-sm"
-                onClick={() => setIsVideoPlaying(true)}
-              >
-                <Play className="mr-2 w-5 h-5" />
-                Ver Como Funciona
-              </Button>
-            </div>
-
-            <div className="flex flex-wrap justify-center gap-8 text-center">
-              <div className="flex items-center gap-2 text-gray-300">
-                <CheckCircle className="w-5 h-5 text-green-400" />
-                <span>Sem mensalidades</span>
-              </div>
-              <div className="flex items-center gap-2 text-gray-300">
-                <CheckCircle className="w-5 h-5 text-green-400" />
-                <span>Resultados em 30 dias</span>
-              </div>
-              <div className="flex items-center gap-2 text-gray-300">
-                <CheckCircle className="w-5 h-5 text-green-400" />
-                <span>Garantia de 60 dias</span>
-              </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Social Proof */}
-      <section className="py-12 bg-black/20 backdrop-blur-sm">
+      {/* 3. STORYTELLING / DOR DO PÚBLICO-ALVO */}
+      <section className="py-20 bg-gradient-to-r from-red-900/20 to-orange-900/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-            <div>
-              <div className="text-3xl sm:text-4xl font-bold text-white mb-2">50K+</div>
-              <div className="text-gray-400">Usuários Ativos</div>
-            </div>
-            <div>
-              <div className="text-3xl sm:text-4xl font-bold text-white mb-2">15kg</div>
-              <div className="text-gray-400">Média de Perda</div>
-            </div>
-            <div>
-              <div className="text-3xl sm:text-4xl font-bold text-white mb-2">4.9★</div>
-              <div className="text-gray-400">Avaliação App</div>
-            </div>
-            <div>
-              <div className="text-3xl sm:text-4xl font-bold text-white mb-2">90%</div>
-              <div className="text-gray-400">Taxa de Sucesso</div>
-            </div>
+          <div className="text-center mb-16">
+            <h2 className="text-3xl sm:text-5xl font-bold text-white mb-8">
+              Por Que 87% dos Homens Entre 25 e 45 Anos<br />
+              <span className="text-red-400">Falham na Transformação Corporal?</span>
+            </h2>
+            <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
+              A resposta é simples: <strong className="text-white">eles não conhecem o próprio metabolismo.</strong><br />
+              Você já passou por isso?
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+            <Card className="bg-gradient-to-br from-red-900/30 to-red-800/30 border-red-500/30 backdrop-blur-sm">
+              <CardContent className="p-8 text-center">
+                <div className="w-16 h-16 bg-red-500/20 rounded-full flex items-center justify-center mx-auto mb-6">
+                  <Timer className="w-8 h-8 text-red-400" />
+                </div>
+                <h3 className="text-lg font-bold text-white mb-4">Falta de Energia</h3>
+                <p className="text-gray-300 text-sm">
+                  Acorda cansado, passa o dia arrastando e chega em casa sem disposição para nada
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="bg-gradient-to-br from-orange-900/30 to-orange-800/30 border-orange-500/30 backdrop-blur-sm">
+              <CardContent className="p-8 text-center">
+                <div className="w-16 h-16 bg-orange-500/20 rounded-full flex items-center justify-center mx-auto mb-6">
+                  <Target className="w-8 h-8 text-orange-400" />
+                </div>
+                <h3 className="text-lg font-bold text-white mb-4">Dificuldade Muscular</h3>
+                <p className="text-gray-300 text-sm">
+                  Treina há meses mas não vê ganho de massa magra significativo
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="bg-gradient-to-br from-yellow-900/30 to-yellow-800/30 border-yellow-500/30 backdrop-blur-sm">
+              <CardContent className="p-8 text-center">
+                <div className="w-16 h-16 bg-yellow-500/20 rounded-full flex items-center justify-center mx-auto mb-6">
+                  <Activity className="w-8 h-8 text-yellow-400" />
+                </div>
+                <h3 className="text-lg font-bold text-white mb-4">Gordura Abdominal</h3>
+                <p className="text-gray-300 text-sm">
+                  A barriga teimosa que não sai, mesmo fazendo dieta e exercícios
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="bg-gradient-to-br from-gray-900/30 to-gray-800/30 border-gray-500/30 backdrop-blur-sm">
+              <CardContent className="p-8 text-center">
+                <div className="w-16 h-16 bg-gray-500/20 rounded-full flex items-center justify-center mx-auto mb-6">
+                  <Brain className="w-8 h-8 text-gray-400" />
+                </div>
+                <h3 className="text-lg font-bold text-white mb-4">Fadiga Mental</h3>
+                <p className="text-gray-300 text-sm">
+                  Dificuldade de concentração e produtividade no trabalho
+                </p>
+              </CardContent>
+            </Card>
+          </div>
+
+          <div className="text-center">
+            <p className="text-2xl text-white font-semibold mb-4">
+              Se você se identificou com pelo menos 2 desses problemas...
+            </p>
+            <p className="text-xl text-orange-400 font-bold">
+              Você está no lugar certo para resolver TODOS eles de uma vez por todas.
+            </p>
           </div>
         </div>
       </section>
 
-      {/* Problem/Solution */}
+      {/* 4. APRESENTAÇÃO DA SOLUÇÃO */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-5xl font-bold text-white mb-6">
-              Cansado de Tentar e Não Ver Resultados?
+            <h2 className="text-3xl sm:text-5xl font-bold text-white mb-8">
+              A Solução Que Vai Mudar Sua Vida:
+              <span className="bg-gradient-to-r from-orange-400 to-red-400 bg-clip-text text-transparent block">
+                Protocolo Recomposição Alfa
+              </span>
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              A maioria das pessoas falha porque não tem um plano personalizado. 
-              Nossa IA cria o programa perfeito para SEU corpo e SEU estilo de vida.
+            <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-12">
+              Um <strong className="text-white">diagnóstico simples de 3 minutos</strong> que identifica se seu metabolismo é:
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8 mb-16">
+            <Card className="bg-gradient-to-br from-green-900/20 to-emerald-900/20 border-green-500/20 backdrop-blur-sm">
+              <CardContent className="p-8 text-center">
+                <div className="w-20 h-20 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-6">
+                  <Flame className="w-10 h-10 text-white" />
+                </div>
+                <h3 className="text-2xl font-bold text-white mb-4">ACELERADO</h3>
+                <p className="text-gray-300">
+                  Queima calorias rapidamente, precisa comer mais para ganhar massa, 
+                  tem dificuldade para engordar
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="bg-gradient-to-br from-blue-900/20 to-cyan-900/20 border-blue-500/20 backdrop-blur-sm">
+              <CardContent className="p-8 text-center">
+                <div className="w-20 h-20 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-6">
+                  <Target className="w-10 h-10 text-white" />
+                </div>
+                <h3 className="text-2xl font-bold text-white mb-4">EQUILIBRADO</h3>
+                <p className="text-gray-300">
+                  Metabolismo moderado, responde bem a protocolos balanceados, 
+                  ganha e perde peso com facilidade média
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="bg-gradient-to-br from-purple-900/20 to-pink-900/20 border-purple-500/20 backdrop-blur-sm">
+              <CardContent className="p-8 text-center">
+                <div className="w-20 h-20 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-6">
+                  <Clock className="w-10 h-10 text-white" />
+                </div>
+                <h3 className="text-2xl font-bold text-white mb-4">LENTO</h3>
+                <p className="text-gray-300">
+                  Queima calorias devagar, acumula gordura facilmente, 
+                  precisa de estratégias específicas para acelerar
+                </p>
+              </CardContent>
+            </Card>
+          </div>
+
+          <div className="text-center bg-gradient-to-r from-orange-900/30 to-red-900/30 rounded-2xl p-8 border border-orange-500/30">
+            <h3 className="text-2xl font-bold text-white mb-4">
+              Após descobrir seu tipo, você recebe instantaneamente:
+            </h3>
+            <p className="text-xl text-gray-300">
+              O protocolo exato de <strong className="text-orange-400">dieta, treino e rotina</strong> personalizado 
+              para seu metabolismo específico, garantindo <strong className="text-white">recomposição corporal acelerada</strong>
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* 5. BENEFÍCIOS CLAROS */}
+      <section className="py-20 bg-gradient-to-r from-orange-900/20 to-red-900/20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl sm:text-5xl font-bold text-white mb-8">
+              O Que Você Vai Descobrir no
+              <span className="text-orange-400 block">Protocolo Recomposição Alfa</span>
+            </h2>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-6">
+            <div className="space-y-6">
+              <div className="flex items-start gap-4 bg-white/5 p-6 rounded-xl backdrop-blur-sm">
+                <div className="w-8 h-8 bg-gradient-to-r from-orange-500 to-red-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                  <CheckCircle className="w-5 h-5 text-white" />
+                </div>
+                <div>
+                  <h3 className="text-lg font-bold text-white mb-2">Descubra em minutos seu tipo metabólico</h3>
+                  <p className="text-gray-300">Teste científico de 3 minutos que revela se você é Acelerado, Equilibrado ou Lento</p>
+                </div>
+              </div>
+
+              <div className="flex items-start gap-4 bg-white/5 p-6 rounded-xl backdrop-blur-sm">
+                <div className="w-8 h-8 bg-gradient-to-r from-orange-500 to-red-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                  <CheckCircle className="w-5 h-5 text-white" />
+                </div>
+                <div>
+                  <h3 className="text-lg font-bold text-white mb-2">Calculadora de macronutrientes personalizada</h3>
+                  <p className="text-gray-300">Saiba exatamente quantas proteínas, carboidratos e gorduras consumir para SEU metabolismo</p>
+                </div>
+              </div>
+
+              <div className="flex items-start gap-4 bg-white/5 p-6 rounded-xl backdrop-blur-sm">
+                <div className="w-8 h-8 bg-gradient-to-r from-orange-500 to-red-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                  <CheckCircle className="w-5 h-5 text-white" />
+                </div>
+                <div>
+                  <h3 className="text-lg font-bold text-white mb-2">Protocolo de ativação hormonal matinal</h3>
+                  <p className="text-gray-300">Rotina de 15 minutos que dispara energia e foco desde o momento que você acorda</p>
+                </div>
+              </div>
+
+              <div className="flex items-start gap-4 bg-white/5 p-6 rounded-xl backdrop-blur-sm">
+                <div className="w-8 h-8 bg-gradient-to-r from-orange-500 to-red-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                  <CheckCircle className="w-5 h-5 text-white" />
+                </div>
+                <div>
+                  <h3 className="text-lg font-bold text-white mb-2">Treino inteligente e eficiente</h3>
+                  <p className="text-gray-300">Como treinar 3-4x por semana e ter resultados superiores a quem treina todos os dias</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="space-y-6">
+              <div className="flex items-start gap-4 bg-white/5 p-6 rounded-xl backdrop-blur-sm">
+                <div className="w-8 h-8 bg-gradient-to-r from-orange-500 to-red-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                  <CheckCircle className="w-5 h-5 text-white" />
+                </div>
+                <div>
+                  <h3 className="text-lg font-bold text-white mb-2">Alimentação estratégica para rotina corrida</h3>
+                  <p className="text-gray-300">Refeições práticas de 10 minutos que aceleram metabolismo e ganho muscular</p>
+                </div>
+              </div>
+
+              <div className="flex items-start gap-4 bg-white/5 p-6 rounded-xl backdrop-blur-sm">
+                <div className="w-8 h-8 bg-gradient-to-r from-orange-500 to-red-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                  <CheckCircle className="w-5 h-5 text-white" />
+                </div>
+                <div>
+                  <h3 className="text-lg font-bold text-white mb-2">Fórmula de hidratação executiva</h3>
+                  <p className="text-gray-300">Como manter energia constante e foco laser durante todo o dia de trabalho</p>
+                </div>
+              </div>
+
+              <div className="flex items-start gap-4 bg-white/5 p-6 rounded-xl backdrop-blur-sm">
+                <div className="w-8 h-8 bg-gradient-to-r from-orange-500 to-red-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                  <CheckCircle className="w-5 h-5 text-white" />
+                </div>
+                <div>
+                  <h3 className="text-lg font-bold text-white mb-2">Mentalidade de consistência</h3>
+                  <p className="text-gray-300">O mindset que diferencia homens que alcançam resultados dos que desistem no meio do caminho</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 6. PROVA / AUTORIDADE */}
+      <section className="py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl sm:text-5xl font-bold text-white mb-8">
+              Metodologia Exclusiva Testada com
+              <span className="text-orange-400 block">Executivos de Alto Desempenho</span>
+            </h2>
+            <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
+              Este protocolo não é teoria. É o resultado de <strong className="text-white">3 anos de pesquisa</strong> e 
+              aplicação prática com <strong className="text-orange-400">mais de 2.847 executivos e profissionais</strong> que 
+              não tinham tempo a perder com métodos que não funcionam.
             </p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
-            <Card className="bg-gradient-to-br from-red-900/20 to-red-800/20 border-red-500/20 backdrop-blur-sm">
+            <Card className="bg-gradient-to-br from-blue-900/20 to-cyan-900/20 border-blue-500/20 backdrop-blur-sm">
               <CardContent className="p-8 text-center">
-                <div className="w-16 h-16 bg-red-500/20 rounded-full flex items-center justify-center mx-auto mb-6">
-                  <Target className="w-8 h-8 text-red-400" />
-                </div>
-                <h3 className="text-xl font-bold text-white mb-4">Sem Plano Personalizado</h3>
-                <p className="text-gray-300">
-                  Treinos genéricos que não consideram seu biotipo, disponibilidade e objetivos específicos
-                </p>
+                <div className="text-4xl font-bold text-blue-400 mb-2">2.847</div>
+                <div className="text-white font-semibold mb-2">Executivos Transformados</div>
+                <div className="text-gray-300 text-sm">Profissionais de alto desempenho que aplicaram o protocolo</div>
               </CardContent>
             </Card>
 
-            <Card className="bg-gradient-to-br from-yellow-900/20 to-yellow-800/20 border-yellow-500/20 backdrop-blur-sm">
+            <Card className="bg-gradient-to-br from-green-900/20 to-emerald-900/20 border-green-500/20 backdrop-blur-sm">
               <CardContent className="p-8 text-center">
-                <div className="w-16 h-16 bg-yellow-500/20 rounded-full flex items-center justify-center mx-auto mb-6">
-                  <Clock className="w-8 h-8 text-yellow-400" />
-                </div>
-                <h3 className="text-xl font-bold text-white mb-4">Falta de Consistência</h3>
-                <p className="text-gray-300">
-                  Sem acompanhamento diário e motivação constante, é fácil desistir nos primeiros obstáculos
-                </p>
+                <div className="text-4xl font-bold text-green-400 mb-2">94%</div>
+                <div className="text-white font-semibold mb-2">Taxa de Sucesso</div>
+                <div className="text-gray-300 text-sm">Dos homens que seguiram o protocolo viram resultados em 30 dias</div>
               </CardContent>
             </Card>
 
-            <Card className="bg-gradient-to-br from-blue-900/20 to-blue-800/20 border-blue-500/20 backdrop-blur-sm">
+            <Card className="bg-gradient-to-br from-purple-900/20 to-pink-900/20 border-purple-500/20 backdrop-blur-sm">
               <CardContent className="p-8 text-center">
-                <div className="w-16 h-16 bg-blue-500/20 rounded-full flex items-center justify-center mx-auto mb-6">
-                  <TrendingUp className="w-8 h-8 text-blue-400" />
-                </div>
-                <h3 className="text-xl font-bold text-white mb-4">Resultados Lentos</h3>
-                <p className="text-gray-300">
-                  Métodos ultrapassados que demoram meses para mostrar mudanças visíveis no corpo
-                </p>
+                <div className="text-4xl font-bold text-purple-400 mb-2">3 Anos</div>
+                <div className="text-white font-semibold mb-2">de Desenvolvimento</div>
+                <div className="text-gray-300 text-sm">Fundamentado em práticas de saúde e performance masculina</div>
               </CardContent>
             </Card>
           </div>
-        </div>
-      </section>
 
-      {/* Features */}
-      <section className="py-20 bg-gradient-to-r from-purple-900/20 to-pink-900/20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-5xl font-bold text-white mb-6">
-              Como Nosso App Resolve Tudo Isso
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Tecnologia de ponta combinada com ciência do exercício para resultados garantidos
+          <div className="text-center mt-12 bg-gradient-to-r from-gray-900/50 to-black/50 rounded-2xl p-8 border border-gray-500/30">
+            <p className="text-xl text-gray-300 mb-4">
+              <strong className="text-white">"Não criamos mais um método genérico.</strong>
+            </p>
+            <p className="text-xl text-gray-300">
+              Desenvolvemos um protocolo científico que se adapta ao SEU metabolismo específico, 
+              porque sabemos que <strong className="text-orange-400">homens de sucesso não têm tempo para tentativa e erro."</strong>
             </p>
           </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <Card className="bg-white/5 border-white/10 backdrop-blur-sm hover:bg-white/10 transition-all duration-300">
-              <CardContent className="p-8">
-                <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center mb-6">
-                  <Zap className="w-6 h-6 text-white" />
-                </div>
-                <h3 className="text-xl font-bold text-white mb-4">IA Personalizada</h3>
-                <p className="text-gray-300">
-                  Algoritmo avançado que analisa seu corpo, histórico e objetivos para criar o plano perfeito
-                </p>
-              </CardContent>
-            </Card>
-
-            <Card className="bg-white/5 border-white/10 backdrop-blur-sm hover:bg-white/10 transition-all duration-300">
-              <CardContent className="p-8">
-                <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-500 rounded-lg flex items-center justify-center mb-6">
-                  <Trophy className="w-6 h-6 text-white" />
-                </div>
-                <h3 className="text-xl font-bold text-white mb-4">Treinos Eficientes</h3>
-                <p className="text-gray-300">
-                  Sessões de 20-45 minutos que maximizam queima de gordura e ganho muscular simultaneamente
-                </p>
-              </CardContent>
-            </Card>
-
-            <Card className="bg-white/5 border-white/10 backdrop-blur-sm hover:bg-white/10 transition-all duration-300">
-              <CardContent className="p-8">
-                <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center mb-6">
-                  <Users className="w-6 h-6 text-white" />
-                </div>
-                <h3 className="text-xl font-bold text-white mb-4">Comunidade Ativa</h3>
-                <p className="text-gray-300">
-                  Suporte 24/7 de coaches certificados e comunidade de pessoas com os mesmos objetivos
-                </p>
-              </CardContent>
-            </Card>
-
-            <Card className="bg-white/5 border-white/10 backdrop-blur-sm hover:bg-white/10 transition-all duration-300">
-              <CardContent className="p-8">
-                <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-red-500 rounded-lg flex items-center justify-center mb-6">
-                  <Target className="w-6 h-6 text-white" />
-                </div>
-                <h3 className="text-xl font-bold text-white mb-4">Nutrição Inteligente</h3>
-                <p className="text-gray-300">
-                  Planos alimentares adaptativos que se ajustam aos seus resultados e preferências
-                </p>
-              </CardContent>
-            </Card>
-
-            <Card className="bg-white/5 border-white/10 backdrop-blur-sm hover:bg-white/10 transition-all duration-300">
-              <CardContent className="p-8">
-                <div className="w-12 h-12 bg-gradient-to-r from-pink-500 to-purple-500 rounded-lg flex items-center justify-center mb-6">
-                  <Star className="w-6 h-6 text-white" />
-                </div>
-                <h3 className="text-xl font-bold text-white mb-4">Acompanhamento Real</h3>
-                <p className="text-gray-300">
-                  Métricas detalhadas, fotos de progresso e ajustes automáticos baseados nos seus resultados
-                </p>
-              </CardContent>
-            </Card>
-
-            <Card className="bg-white/5 border-white/10 backdrop-blur-sm hover:bg-white/10 transition-all duration-300">
-              <CardContent className="p-8">
-                <div className="w-12 h-12 bg-gradient-to-r from-indigo-500 to-blue-500 rounded-lg flex items-center justify-center mb-6">
-                  <CheckCircle className="w-6 h-6 text-white" />
-                </div>
-                <h3 className="text-xl font-bold text-white mb-4">Garantia Total</h3>
-                <p className="text-gray-300">
-                  60 dias para testar. Se não ver resultados, devolvemos 100% do seu investimento
-                </p>
-              </CardContent>
-            </Card>
-          </div>
         </div>
       </section>
 
-      {/* Testimonials */}
-      <section className="py-20">
+      {/* 7. DEPOIMENTOS SIMULADOS */}
+      <section className="py-20 bg-gradient-to-r from-gray-900/20 to-black/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-5xl font-bold text-white mb-6">
-              Transformações Reais de Pessoas Reais
+            <h2 className="text-3xl sm:text-5xl font-bold text-white mb-8">
+              Transformações Reais de Homens Reais
             </h2>
           </div>
 
@@ -254,16 +351,16 @@ export default function FitnessAppLanding() {
                   ))}
                 </div>
                 <p className="text-gray-300 mb-6 italic">
-                  "Perdi 18kg em 3 meses e ganhei músculos que nunca pensei que conseguiria. 
-                  O app é viciante de tão bom!"
+                  "Descobri que tenho metabolismo LENTO. Em 45 dias seguindo o protocolo específico, 
+                  perdi 8kg de gordura e ganhei 3kg de músculo. Minha energia voltou e minha produtividade no trabalho disparou!"
                 </p>
                 <div className="flex items-center">
                   <div className="w-12 h-12 bg-gradient-to-r from-green-400 to-emerald-400 rounded-full flex items-center justify-center mr-4">
-                    <span className="text-white font-bold">MC</span>
+                    <span className="text-white font-bold">RS</span>
                   </div>
                   <div>
-                    <div className="text-white font-semibold">Maria Clara</div>
-                    <div className="text-gray-400 text-sm">Perdeu 18kg em 90 dias</div>
+                    <div className="text-white font-semibold">Ricardo Silva</div>
+                    <div className="text-gray-400 text-sm">Diretor Comercial, 38 anos</div>
                   </div>
                 </div>
               </CardContent>
@@ -277,16 +374,16 @@ export default function FitnessAppLanding() {
                   ))}
                 </div>
                 <p className="text-gray-300 mb-6 italic">
-                  "Finalmente um app que funciona! Ganho muscular visível em 6 semanas. 
-                  Meus amigos não acreditam na transformação."
+                  "Metabolismo ACELERADO aqui. Sempre fui magro demais. Com o protocolo certo, 
+                  ganhei 7kg de massa magra em 2 meses. Finalmente tenho o físico que sempre quis!"
                 </p>
                 <div className="flex items-center">
                   <div className="w-12 h-12 bg-gradient-to-r from-blue-400 to-cyan-400 rounded-full flex items-center justify-center mr-4">
-                    <span className="text-white font-bold">RS</span>
+                    <span className="text-white font-bold">MC</span>
                   </div>
                   <div>
-                    <div className="text-white font-semibold">Rafael Santos</div>
-                    <div className="text-gray-400 text-sm">Ganhou 8kg de massa magra</div>
+                    <div className="text-white font-semibold">Marcelo Costa</div>
+                    <div className="text-gray-400 text-sm">Engenheiro, 31 anos</div>
                   </div>
                 </div>
               </CardContent>
@@ -300,16 +397,16 @@ export default function FitnessAppLanding() {
                   ))}
                 </div>
                 <p className="text-gray-300 mb-6 italic">
-                  "Aos 45 anos consegui o corpo que sempre quis. O app se adapta à minha rotina corrida. 
-                  Recomendo para todos!"
+                  "Metabolismo EQUILIBRADO. O protocolo me ensinou a otimizar minha alimentação e treino. 
+                  Resultado: -12kg de gordura, +5kg de músculo. Aos 42 anos, estou no melhor shape da minha vida!"
                 </p>
                 <div className="flex items-center">
                   <div className="w-12 h-12 bg-gradient-to-r from-purple-400 to-pink-400 rounded-full flex items-center justify-center mr-4">
-                    <span className="text-white font-bold">AL</span>
+                    <span className="text-white font-bold">AF</span>
                   </div>
                   <div>
-                    <div className="text-white font-semibold">Ana Luiza</div>
-                    <div className="text-gray-400 text-sm">Transformação aos 45 anos</div>
+                    <div className="text-white font-semibold">André Ferreira</div>
+                    <div className="text-gray-400 text-sm">Empresário, 42 anos</div>
                   </div>
                 </div>
               </CardContent>
@@ -318,64 +415,60 @@ export default function FitnessAppLanding() {
         </div>
       </section>
 
-      {/* Pricing */}
-      <section className="py-20 bg-gradient-to-r from-slate-900 to-gray-900">
+      {/* 8. OFERTA IRRESISTÍVEL */}
+      <section className="py-20 bg-gradient-to-r from-orange-900/30 to-red-900/30">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl sm:text-5xl font-bold text-white mb-6">
-            Oferta Especial por Tempo Limitado
+          <h2 className="text-3xl sm:text-5xl font-bold text-white mb-8">
+            Quanto Vale Conhecer Seu Metabolismo?
           </h2>
-          <p className="text-xl text-gray-300 mb-12">
-            Mais de 50.000 pessoas já transformaram seus corpos. Seja a próxima!
-          </p>
+          
+          <div className="mb-12">
+            <p className="text-xl text-gray-300 mb-6">
+              Uma consulta com nutricionista especializado: <span className="text-white font-bold">R$ 300</span>
+            </p>
+            <p className="text-xl text-gray-300 mb-6">
+              Avaliação física completa: <span className="text-white font-bold">R$ 250</span>
+            </p>
+            <p className="text-xl text-gray-300 mb-6">
+              Personal trainer especializado: <span className="text-white font-bold">R$ 200/aula</span>
+            </p>
+            <p className="text-xl text-gray-300 mb-8">
+              Acompanhamento por 3 meses: <span className="text-white font-bold">R$ 2.400</span>
+            </p>
+            
+            <div className="border-t border-gray-500 pt-6">
+              <p className="text-2xl text-gray-300 mb-4">
+                <strong className="text-white">Total que você gastaria: R$ 3.150</strong>
+              </p>
+            </div>
+          </div>
 
-          <Card className="bg-gradient-to-br from-purple-900/40 to-pink-900/40 border-2 border-purple-500/50 backdrop-blur-sm max-w-md mx-auto">
+          <Card className="bg-gradient-to-br from-orange-900/40 to-red-900/40 border-2 border-orange-500/50 backdrop-blur-sm max-w-md mx-auto">
             <CardContent className="p-8">
-              <Badge className="mb-4 bg-gradient-to-r from-red-500 to-orange-500 text-white border-0 px-4 py-2">
-                🔥 DESCONTO DE 70%
+              <Badge className="mb-6 bg-gradient-to-r from-red-500 to-orange-500 text-white border-0 px-6 py-3 text-lg font-bold">
+                🔥 OFERTA ESPECIAL DE LANÇAMENTO
               </Badge>
               
-              <div className="mb-6">
-                <div className="text-gray-400 line-through text-2xl mb-2">De R$ 297</div>
-                <div className="text-5xl font-bold text-white mb-2">R$ 97</div>
-                <div className="text-gray-300">Pagamento único • Acesso vitalício</div>
+              <div className="mb-8">
+                <div className="text-gray-400 line-through text-2xl mb-2">De R$ 497</div>
+                <div className="text-6xl font-bold text-white mb-4">R$ 97</div>
+                <div className="text-gray-300 text-lg">Acesso imediato e vitalício</div>
               </div>
 
-              <ul className="text-left space-y-3 mb-8">
-                <li className="flex items-center text-gray-300">
-                  <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
-                  Planos personalizados por IA
-                </li>
-                <li className="flex items-center text-gray-300">
-                  <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
-                  Treinos para casa e academia
-                </li>
-                <li className="flex items-center text-gray-300">
-                  <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
-                  Nutrição inteligente adaptativa
-                </li>
-                <li className="flex items-center text-gray-300">
-                  <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
-                  Suporte de coaches 24/7
-                </li>
-                <li className="flex items-center text-gray-300">
-                  <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
-                  Comunidade exclusiva
-                </li>
-                <li className="flex items-center text-gray-300">
-                  <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
-                  Garantia de 60 dias
-                </li>
-              </ul>
+              <p className="text-gray-300 mb-8">
+                Por menos de <strong className="text-orange-400">R$ 3,23 por dia</strong> durante um mês, 
+                você tem acesso ao conhecimento que vai transformar seu corpo para sempre.
+              </p>
 
               <Button 
                 size="lg" 
-                className="w-full bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white py-4 text-lg font-semibold rounded-full shadow-2xl hover:shadow-purple-500/25 transition-all duration-300 hover:scale-105"
+                className="w-full bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white py-6 text-xl font-bold rounded-full shadow-2xl hover:shadow-orange-500/25 transition-all duration-300 hover:scale-105 mb-4"
               >
-                GARANTIR MINHA TRANSFORMAÇÃO
-                <ArrowRight className="ml-2 w-5 h-5" />
+                GARANTIR MEU PROTOCOLO AGORA
+                <ArrowRight className="ml-3 w-6 h-6" />
               </Button>
 
-              <p className="text-sm text-gray-400 mt-4">
+              <p className="text-sm text-gray-400">
                 ⏰ Oferta válida apenas hoje • Últimas vagas disponíveis
               </p>
             </CardContent>
@@ -383,48 +476,189 @@ export default function FitnessAppLanding() {
         </div>
       </section>
 
-      {/* Final CTA */}
-      <section className="py-20 bg-gradient-to-r from-purple-600 to-pink-600">
+      {/* 9. CHAMADA PARA AÇÃO */}
+      <section className="py-16 bg-gradient-to-r from-orange-600 to-red-600">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl sm:text-5xl font-bold text-white mb-6">
-            Sua Transformação Começa Agora
+          <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
+            Clique no Botão Abaixo e Comece Agora Sua Transformação com o
+            <span className="block">Protocolo Recomposição Alfa</span>
           </h2>
-          <p className="text-xl text-purple-100 mb-8 max-w-2xl mx-auto">
-            Não deixe mais um dia passar sem dar o primeiro passo para o corpo dos seus sonhos. 
-            Milhares já conseguiram, agora é sua vez!
-          </p>
           
           <Button 
             size="lg" 
-            className="bg-white text-purple-600 hover:bg-gray-100 px-12 py-4 text-xl font-bold rounded-full shadow-2xl hover:shadow-white/25 transition-all duration-300 hover:scale-105 mb-6"
+            className="bg-white text-orange-600 hover:bg-gray-100 px-16 py-6 text-2xl font-bold rounded-full shadow-2xl hover:shadow-white/25 transition-all duration-300 hover:scale-105 mb-8"
           >
-            COMEÇAR MINHA JORNADA AGORA
-            <ArrowRight className="ml-2 w-6 h-6" />
+            DESCOBRIR MEU TIPO METABÓLICO
+            <ArrowRight className="ml-3 w-7 h-7" />
           </Button>
           
-          <div className="flex flex-wrap justify-center gap-6 text-purple-100">
+          <div className="flex flex-wrap justify-center gap-8 text-orange-100">
             <div className="flex items-center gap-2">
-              <CheckCircle className="w-5 h-5" />
-              <span>Sem risco • Garantia total</span>
+              <Shield className="w-6 h-6" />
+              <span className="text-lg">Acesso imediato</span>
             </div>
             <div className="flex items-center gap-2">
-              <CheckCircle className="w-5 h-5" />
-              <span>Resultados em 30 dias</span>
+              <CheckCircle className="w-6 h-6" />
+              <span className="text-lg">Garantia total</span>
             </div>
             <div className="flex items-center gap-2">
-              <CheckCircle className="w-5 h-5" />
-              <span>Suporte especializado</span>
+              <Users className="w-6 h-6" />
+              <span className="text-lg">Suporte especializado</span>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="bg-black/40 backdrop-blur-sm py-8">
+      {/* 10. GARANTIA / RISCO REVERSO */}
+      <section className="py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl sm:text-5xl font-bold text-white mb-8">
+              Garantia Blindada de
+              <span className="text-green-400 block">60 Dias ou Seu Dinheiro de Volta</span>
+            </h2>
+          </div>
+
+          <Card className="bg-gradient-to-br from-green-900/20 to-emerald-900/20 border-2 border-green-500/30 backdrop-blur-sm max-w-4xl mx-auto">
+            <CardContent className="p-12 text-center">
+              <div className="w-24 h-24 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-8">
+                <Shield className="w-12 h-12 text-white" />
+              </div>
+              
+              <h3 className="text-2xl font-bold text-white mb-6">
+                Seu Investimento Está 100% Protegido
+              </h3>
+              
+              <p className="text-xl text-gray-300 mb-8 leading-relaxed">
+                Aplique o <strong className="text-white">Protocolo Recomposição Alfa</strong> por 60 dias completos. 
+                Se você não descobrir seu tipo metabólico, não sentir mais energia, não ver mudanças no seu corpo 
+                ou simplesmente não ficar satisfeito por QUALQUER motivo...
+              </p>
+              
+              <p className="text-2xl font-bold text-green-400 mb-8">
+                Devolvemos 100% do seu dinheiro, sem perguntas, sem burocracia.
+              </p>
+              
+              <div className="bg-white/5 rounded-xl p-6">
+                <p className="text-lg text-gray-300">
+                  <strong className="text-white">O risco é ZERO.</strong> Ou o método funciona e transforma seu corpo, 
+                  ou você não perde nada. A decisão mais inteligente que você pode tomar hoje é 
+                  <strong className="text-orange-400"> testar sem risco.</strong>
+                </p>
+              </div>
+            </CardContent>
+          </Card>
+        </div>
+      </section>
+
+      {/* 11. ÚLTIMA CHAMADA (URGÊNCIA) */}
+      <section className="py-20 bg-gradient-to-r from-red-900/30 to-orange-900/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <p className="text-gray-400">
-            © 2024 FitTransform AI. Todos os direitos reservados. 
-            Transforme seu corpo com tecnologia de ponta.
+          <h2 className="text-3xl sm:text-5xl font-bold text-white mb-8">
+            Última Chamada:
+            <span className="text-red-400 block">Não Deixe Mais Um Dia Passar</span>
+          </h2>
+          
+          <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
+            Enquanto você está lendo isso, <strong className="text-white">centenas de homens</strong> estão descobrindo 
+            seu tipo metabólico e iniciando sua transformação. A pergunta é:
+          </p>
+          
+          <p className="text-2xl font-bold text-white mb-12">
+            Você vai continuar preso na mesma rotina sem resultados<br />
+            ou vai se juntar ao grupo seleto de homens que dominam seu metabolismo?
+          </p>
+          
+          <div className="grid md:grid-cols-2 gap-12 mb-16">
+            <Card className="bg-gradient-to-br from-red-900/30 to-red-800/30 border-red-500/30 backdrop-blur-sm">
+              <CardContent className="p-8">
+                <h3 className="text-2xl font-bold text-red-400 mb-6">Se Você NÃO Agir Hoje:</h3>
+                <ul className="text-left space-y-4 text-gray-300">
+                  <li className="flex items-start gap-3">
+                    <div className="w-2 h-2 bg-red-400 rounded-full mt-2 flex-shrink-0"></div>
+                    <span>Continuará sem saber seu tipo metabólico</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <div className="w-2 h-2 bg-red-400 rounded-full mt-2 flex-shrink-0"></div>
+                    <span>Seguirá perdendo tempo com métodos genéricos</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <div className="w-2 h-2 bg-red-400 rounded-full mt-2 flex-shrink-0"></div>
+                    <span>Manterá a falta de energia e disposição</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <div className="w-2 h-2 bg-red-400 rounded-full mt-2 flex-shrink-0"></div>
+                    <span>A gordura abdominal continuará teimosa</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <div className="w-2 h-2 bg-red-400 rounded-full mt-2 flex-shrink-0"></div>
+                    <span>Daqui a 6 meses estará no mesmo lugar</span>
+                  </li>
+                </ul>
+              </CardContent>
+            </Card>
+
+            <Card className="bg-gradient-to-br from-green-900/30 to-emerald-900/30 border-green-500/30 backdrop-blur-sm">
+              <CardContent className="p-8">
+                <h3 className="text-2xl font-bold text-green-400 mb-6">Se Você Agir AGORA:</h3>
+                <ul className="text-left space-y-4 text-gray-300">
+                  <li className="flex items-start gap-3">
+                    <div className="w-2 h-2 bg-green-400 rounded-full mt-2 flex-shrink-0"></div>
+                    <span>Descobrirá seu tipo metabólico em 3 minutos</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <div className="w-2 h-2 bg-green-400 rounded-full mt-2 flex-shrink-0"></div>
+                    <span>Terá o protocolo exato para SEU corpo</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <div className="w-2 h-2 bg-green-400 rounded-full mt-2 flex-shrink-0"></div>
+                    <span>Sentirá mais energia já na primeira semana</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <div className="w-2 h-2 bg-green-400 rounded-full mt-2 flex-shrink-0"></div>
+                    <span>Verá mudanças reais no corpo em 30 dias</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <div className="w-2 h-2 bg-green-400 rounded-full mt-2 flex-shrink-0"></div>
+                    <span>Será parte do grupo seleto de homens alfa</span>
+                  </li>
+                </ul>
+              </CardContent>
+            </Card>
+          </div>
+
+          <div className="bg-gradient-to-r from-orange-900/50 to-red-900/50 rounded-2xl p-8 border border-orange-500/30 mb-12">
+            <p className="text-2xl font-bold text-white mb-4">
+              A escolha é sua. O momento é AGORA.
+            </p>
+            <p className="text-xl text-gray-300">
+              Seja parte do grupo seleto de homens que dominam seu metabolismo e transformam seu corpo com ciência, 
+              não com tentativa e erro.
+            </p>
+          </div>
+
+          <Button 
+            size="lg" 
+            className="bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white px-16 py-6 text-2xl font-bold rounded-full shadow-2xl hover:shadow-orange-500/25 transition-all duration-300 hover:scale-105 mb-8"
+          >
+            SIM, QUERO DOMINAR MEU METABOLISMO AGORA
+            <ArrowRight className="ml-3 w-7 h-7" />
+          </Button>
+
+          <p className="text-lg text-gray-400">
+            ⚡ Acesso imediato • 🛡️ Garantia de 60 dias • 🔥 Oferta por tempo limitado
+          </p>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="bg-black/60 backdrop-blur-sm py-12">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <p className="text-gray-400 mb-4">
+            © 2024 Protocolo Recomposição Alfa. Todos os direitos reservados.
+          </p>
+          <p className="text-gray-500 text-sm">
+            Transforme seu metabolismo. Transforme seu corpo. Transforme sua vida.
           </p>
         </div>
       </footer>
