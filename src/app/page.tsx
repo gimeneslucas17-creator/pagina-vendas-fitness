@@ -2,12 +2,18 @@
 
 import { useState } from 'react'
 import { Button } from '@/components/ui/button'
-import { Card, CardContent } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
 import { CheckCircle, Star, Users, Trophy, Target, Zap, ArrowRight, Play, Clock, TrendingUp, Activity, Brain, Flame, Shield, Timer } from 'lucide-react'
 
 export default function ProtocoloRecomposicaoAlfa() {
   const [isVideoPlaying, setIsVideoPlaying] = useState(false)
+  
+  // URL de checkout único para todos os botões
+  const checkoutUrl = "https://pay.kirvano.com/012b410c-dc53-475a-815a-24ea3b988e8d"
+
+  const handleCheckout = () => {
+    window.open(checkoutUrl, '_blank')
+  }
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-gray-900 to-black">
@@ -39,6 +45,7 @@ export default function ProtocoloRecomposicaoAlfa() {
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-16">
               <Button 
                 size="lg" 
+                onClick={handleCheckout}
                 className="bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white px-12 py-6 text-xl font-bold rounded-full shadow-2xl hover:shadow-orange-500/25 transition-all duration-300 hover:scale-105"
               >
                 DESCOBRIR MEU TIPO METABÓLICO AGORA
@@ -64,8 +71,8 @@ export default function ProtocoloRecomposicaoAlfa() {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
-            <Card className="bg-gradient-to-br from-red-900/30 to-red-800/30 border-red-500/30 backdrop-blur-sm">
-              <CardContent className="p-8 text-center">
+            <div className="bg-gradient-to-br from-red-900/30 to-red-800/30 border border-red-500/30 backdrop-blur-sm rounded-xl">
+              <div className="p-8 text-center">
                 <div className="w-16 h-16 bg-red-500/20 rounded-full flex items-center justify-center mx-auto mb-6">
                   <Timer className="w-8 h-8 text-red-400" />
                 </div>
@@ -73,11 +80,11 @@ export default function ProtocoloRecomposicaoAlfa() {
                 <p className="text-gray-300 text-sm">
                   Acorda cansado, passa o dia arrastando e chega em casa sem disposição para nada
                 </p>
-              </CardContent>
-            </Card>
+              </div>
+            </div>
 
-            <Card className="bg-gradient-to-br from-orange-900/30 to-orange-800/30 border-orange-500/30 backdrop-blur-sm">
-              <CardContent className="p-8 text-center">
+            <div className="bg-gradient-to-br from-orange-900/30 to-orange-800/30 border border-orange-500/30 backdrop-blur-sm rounded-xl">
+              <div className="p-8 text-center">
                 <div className="w-16 h-16 bg-orange-500/20 rounded-full flex items-center justify-center mx-auto mb-6">
                   <Target className="w-8 h-8 text-orange-400" />
                 </div>
@@ -85,11 +92,11 @@ export default function ProtocoloRecomposicaoAlfa() {
                 <p className="text-gray-300 text-sm">
                   Treina há meses mas não vê ganho de massa magra significativo
                 </p>
-              </CardContent>
-            </Card>
+              </div>
+            </div>
 
-            <Card className="bg-gradient-to-br from-yellow-900/30 to-yellow-800/30 border-yellow-500/30 backdrop-blur-sm">
-              <CardContent className="p-8 text-center">
+            <div className="bg-gradient-to-br from-yellow-900/30 to-yellow-800/30 border border-yellow-500/30 backdrop-blur-sm rounded-xl">
+              <div className="p-8 text-center">
                 <div className="w-16 h-16 bg-yellow-500/20 rounded-full flex items-center justify-center mx-auto mb-6">
                   <Activity className="w-8 h-8 text-yellow-400" />
                 </div>
@@ -97,11 +104,11 @@ export default function ProtocoloRecomposicaoAlfa() {
                 <p className="text-gray-300 text-sm">
                   A barriga teimosa que não sai, mesmo fazendo dieta e exercícios
                 </p>
-              </CardContent>
-            </Card>
+              </div>
+            </div>
 
-            <Card className="bg-gradient-to-br from-gray-900/30 to-gray-800/30 border-gray-500/30 backdrop-blur-sm">
-              <CardContent className="p-8 text-center">
+            <div className="bg-gradient-to-br from-gray-900/30 to-gray-800/30 border border-gray-500/30 backdrop-blur-sm rounded-xl">
+              <div className="p-8 text-center">
                 <div className="w-16 h-16 bg-gray-500/20 rounded-full flex items-center justify-center mx-auto mb-6">
                   <Brain className="w-8 h-8 text-gray-400" />
                 </div>
@@ -109,8 +116,8 @@ export default function ProtocoloRecomposicaoAlfa() {
                 <p className="text-gray-300 text-sm">
                   Dificuldade de concentração e produtividade no trabalho
                 </p>
-              </CardContent>
-            </Card>
+              </div>
+            </div>
           </div>
 
           <div className="text-center">
@@ -140,8 +147,8 @@ export default function ProtocoloRecomposicaoAlfa() {
           </div>
 
           <div className="grid md:grid-cols-3 gap-8 mb-16">
-            <Card className="bg-gradient-to-br from-green-900/20 to-emerald-900/20 border-green-500/20 backdrop-blur-sm">
-              <CardContent className="p-8 text-center">
+            <div className="bg-gradient-to-br from-green-900/20 to-emerald-900/20 border border-green-500/20 backdrop-blur-sm rounded-xl">
+              <div className="p-8 text-center">
                 <div className="w-20 h-20 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-6">
                   <Flame className="w-10 h-10 text-white" />
                 </div>
@@ -150,11 +157,11 @@ export default function ProtocoloRecomposicaoAlfa() {
                   Queima calorias rapidamente, precisa comer mais para ganhar massa, 
                   tem dificuldade para engordar
                 </p>
-              </CardContent>
-            </Card>
+              </div>
+            </div>
 
-            <Card className="bg-gradient-to-br from-blue-900/20 to-cyan-900/20 border-blue-500/20 backdrop-blur-sm">
-              <CardContent className="p-8 text-center">
+            <div className="bg-gradient-to-br from-blue-900/20 to-cyan-900/20 border border-blue-500/20 backdrop-blur-sm rounded-xl">
+              <div className="p-8 text-center">
                 <div className="w-20 h-20 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-6">
                   <Target className="w-10 h-10 text-white" />
                 </div>
@@ -163,11 +170,11 @@ export default function ProtocoloRecomposicaoAlfa() {
                   Metabolismo moderado, responde bem a protocolos balanceados, 
                   ganha e perde peso com facilidade média
                 </p>
-              </CardContent>
-            </Card>
+              </div>
+            </div>
 
-            <Card className="bg-gradient-to-br from-purple-900/20 to-pink-900/20 border-purple-500/20 backdrop-blur-sm">
-              <CardContent className="p-8 text-center">
+            <div className="bg-gradient-to-br from-purple-900/20 to-pink-900/20 border border-purple-500/20 backdrop-blur-sm rounded-xl">
+              <div className="p-8 text-center">
                 <div className="w-20 h-20 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-6">
                   <Clock className="w-10 h-10 text-white" />
                 </div>
@@ -176,8 +183,8 @@ export default function ProtocoloRecomposicaoAlfa() {
                   Queima calorias devagar, acumula gordura facilmente, 
                   precisa de estratégias específicas para acelerar
                 </p>
-              </CardContent>
-            </Card>
+              </div>
+            </div>
           </div>
 
           <div className="text-center bg-gradient-to-r from-orange-900/30 to-red-900/30 rounded-2xl p-8 border border-orange-500/30">
@@ -296,29 +303,29 @@ export default function ProtocoloRecomposicaoAlfa() {
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
-            <Card className="bg-gradient-to-br from-blue-900/20 to-cyan-900/20 border-blue-500/20 backdrop-blur-sm">
-              <CardContent className="p-8 text-center">
+            <div className="bg-gradient-to-br from-blue-900/20 to-cyan-900/20 border border-blue-500/20 backdrop-blur-sm rounded-xl">
+              <div className="p-8 text-center">
                 <div className="text-4xl font-bold text-blue-400 mb-2">2.847</div>
                 <div className="text-white font-semibold mb-2">Executivos Transformados</div>
                 <div className="text-gray-300 text-sm">Profissionais de alto desempenho que aplicaram o protocolo</div>
-              </CardContent>
-            </Card>
+              </div>
+            </div>
 
-            <Card className="bg-gradient-to-br from-green-900/20 to-emerald-900/20 border-green-500/20 backdrop-blur-sm">
-              <CardContent className="p-8 text-center">
+            <div className="bg-gradient-to-br from-green-900/20 to-emerald-900/20 border border-green-500/20 backdrop-blur-sm rounded-xl">
+              <div className="p-8 text-center">
                 <div className="text-4xl font-bold text-green-400 mb-2">94%</div>
                 <div className="text-white font-semibold mb-2">Taxa de Sucesso</div>
                 <div className="text-gray-300 text-sm">Dos homens que seguiram o protocolo viram resultados em 30 dias</div>
-              </CardContent>
-            </Card>
+              </div>
+            </div>
 
-            <Card className="bg-gradient-to-br from-purple-900/20 to-pink-900/20 border-purple-500/20 backdrop-blur-sm">
-              <CardContent className="p-8 text-center">
+            <div className="bg-gradient-to-br from-purple-900/20 to-pink-900/20 border border-purple-500/20 backdrop-blur-sm rounded-xl">
+              <div className="p-8 text-center">
                 <div className="text-4xl font-bold text-purple-400 mb-2">3 Anos</div>
                 <div className="text-white font-semibold mb-2">de Desenvolvimento</div>
                 <div className="text-gray-300 text-sm">Fundamentado em práticas de saúde e performance masculina</div>
-              </CardContent>
-            </Card>
+              </div>
+            </div>
           </div>
 
           <div className="text-center mt-12 bg-gradient-to-r from-gray-900/50 to-black/50 rounded-2xl p-8 border border-gray-500/30">
@@ -343,8 +350,8 @@ export default function ProtocoloRecomposicaoAlfa() {
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
-            <Card className="bg-gradient-to-br from-green-900/20 to-emerald-900/20 border-green-500/20 backdrop-blur-sm">
-              <CardContent className="p-8">
+            <div className="bg-gradient-to-br from-green-900/20 to-emerald-900/20 border border-green-500/20 backdrop-blur-sm rounded-xl">
+              <div className="p-8">
                 <div className="flex items-center mb-4">
                   {[...Array(5)].map((_, i) => (
                     <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
@@ -363,11 +370,11 @@ export default function ProtocoloRecomposicaoAlfa() {
                     <div className="text-gray-400 text-sm">Diretor Comercial, 38 anos</div>
                   </div>
                 </div>
-              </CardContent>
-            </Card>
+              </div>
+            </div>
 
-            <Card className="bg-gradient-to-br from-blue-900/20 to-cyan-900/20 border-blue-500/20 backdrop-blur-sm">
-              <CardContent className="p-8">
+            <div className="bg-gradient-to-br from-blue-900/20 to-cyan-900/20 border border-blue-500/20 backdrop-blur-sm rounded-xl">
+              <div className="p-8">
                 <div className="flex items-center mb-4">
                   {[...Array(5)].map((_, i) => (
                     <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
@@ -386,11 +393,11 @@ export default function ProtocoloRecomposicaoAlfa() {
                     <div className="text-gray-400 text-sm">Engenheiro, 31 anos</div>
                   </div>
                 </div>
-              </CardContent>
-            </Card>
+              </div>
+            </div>
 
-            <Card className="bg-gradient-to-br from-purple-900/20 to-pink-900/20 border-purple-500/20 backdrop-blur-sm">
-              <CardContent className="p-8">
+            <div className="bg-gradient-to-br from-purple-900/20 to-pink-900/20 border border-purple-500/20 backdrop-blur-sm rounded-xl">
+              <div className="p-8">
                 <div className="flex items-center mb-4">
                   {[...Array(5)].map((_, i) => (
                     <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
@@ -409,8 +416,8 @@ export default function ProtocoloRecomposicaoAlfa() {
                     <div className="text-gray-400 text-sm">Empresário, 42 anos</div>
                   </div>
                 </div>
-              </CardContent>
-            </Card>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -443,8 +450,8 @@ export default function ProtocoloRecomposicaoAlfa() {
             </div>
           </div>
 
-          <Card className="bg-gradient-to-br from-orange-900/40 to-red-900/40 border-2 border-orange-500/50 backdrop-blur-sm max-w-md mx-auto">
-            <CardContent className="p-8">
+          <div className="bg-gradient-to-br from-orange-900/40 to-red-900/40 border-2 border-orange-500/50 backdrop-blur-sm max-w-md mx-auto rounded-xl">
+            <div className="p-8">
               <Badge className="mb-6 bg-gradient-to-r from-red-500 to-orange-500 text-white border-0 px-6 py-3 text-lg font-bold">
                 🔥 OFERTA ESPECIAL DE LANÇAMENTO
               </Badge>
@@ -462,6 +469,7 @@ export default function ProtocoloRecomposicaoAlfa() {
 
               <Button 
                 size="lg" 
+                onClick={handleCheckout}
                 className="w-full bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white py-6 text-xl font-bold rounded-full shadow-2xl hover:shadow-orange-500/25 transition-all duration-300 hover:scale-105 mb-4"
               >
                 GARANTIR MEU PROTOCOLO AGORA
@@ -471,8 +479,8 @@ export default function ProtocoloRecomposicaoAlfa() {
               <p className="text-sm text-gray-400">
                 ⏰ Oferta válida apenas hoje • Últimas vagas disponíveis
               </p>
-            </CardContent>
-          </Card>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -486,6 +494,7 @@ export default function ProtocoloRecomposicaoAlfa() {
           
           <Button 
             size="lg" 
+            onClick={handleCheckout}
             className="bg-white text-orange-600 hover:bg-gray-100 px-16 py-6 text-2xl font-bold rounded-full shadow-2xl hover:shadow-white/25 transition-all duration-300 hover:scale-105 mb-8"
           >
             DESCOBRIR MEU TIPO METABÓLICO
@@ -519,8 +528,8 @@ export default function ProtocoloRecomposicaoAlfa() {
             </h2>
           </div>
 
-          <Card className="bg-gradient-to-br from-green-900/20 to-emerald-900/20 border-2 border-green-500/30 backdrop-blur-sm max-w-4xl mx-auto">
-            <CardContent className="p-12 text-center">
+          <div className="bg-gradient-to-br from-green-900/20 to-emerald-900/20 border-2 border-green-500/30 backdrop-blur-sm max-w-4xl mx-auto rounded-xl">
+            <div className="p-12 text-center">
               <div className="w-24 h-24 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-8">
                 <Shield className="w-12 h-12 text-white" />
               </div>
@@ -546,8 +555,8 @@ export default function ProtocoloRecomposicaoAlfa() {
                   <strong className="text-orange-400"> testar sem risco.</strong>
                 </p>
               </div>
-            </CardContent>
-          </Card>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -570,8 +579,8 @@ export default function ProtocoloRecomposicaoAlfa() {
           </p>
           
           <div className="grid md:grid-cols-2 gap-12 mb-16">
-            <Card className="bg-gradient-to-br from-red-900/30 to-red-800/30 border-red-500/30 backdrop-blur-sm">
-              <CardContent className="p-8">
+            <div className="bg-gradient-to-br from-red-900/30 to-red-800/30 border border-red-500/30 backdrop-blur-sm rounded-xl">
+              <div className="p-8">
                 <h3 className="text-2xl font-bold text-red-400 mb-6">Se Você NÃO Agir Hoje:</h3>
                 <ul className="text-left space-y-4 text-gray-300">
                   <li className="flex items-start gap-3">
@@ -595,11 +604,11 @@ export default function ProtocoloRecomposicaoAlfa() {
                     <span>Daqui a 6 meses estará no mesmo lugar</span>
                   </li>
                 </ul>
-              </CardContent>
-            </Card>
+              </div>
+            </div>
 
-            <Card className="bg-gradient-to-br from-green-900/30 to-emerald-900/30 border-green-500/30 backdrop-blur-sm">
-              <CardContent className="p-8">
+            <div className="bg-gradient-to-br from-green-900/30 to-emerald-900/30 border border-green-500/30 backdrop-blur-sm rounded-xl">
+              <div className="p-8">
                 <h3 className="text-2xl font-bold text-green-400 mb-6">Se Você Agir AGORA:</h3>
                 <ul className="text-left space-y-4 text-gray-300">
                   <li className="flex items-start gap-3">
@@ -623,8 +632,8 @@ export default function ProtocoloRecomposicaoAlfa() {
                     <span>Será parte do grupo seleto de homens alfa</span>
                   </li>
                 </ul>
-              </CardContent>
-            </Card>
+              </div>
+            </div>
           </div>
 
           <div className="bg-gradient-to-r from-orange-900/50 to-red-900/50 rounded-2xl p-8 border border-orange-500/30 mb-12">
@@ -639,6 +648,7 @@ export default function ProtocoloRecomposicaoAlfa() {
 
           <Button 
             size="lg" 
+            onClick={handleCheckout}
             className="bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white px-16 py-6 text-2xl font-bold rounded-full shadow-2xl hover:shadow-orange-500/25 transition-all duration-300 hover:scale-105 mb-8"
           >
             SIM, QUERO DOMINAR MEU METABOLISMO AGORA
